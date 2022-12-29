@@ -198,15 +198,31 @@ Cards
   color: var(--primaryColor);
 }
 
+/*
 @media screen and (min-width: 768px) {
   .cards-center {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
-  }
-}
-@media screen and (min-width: 1170px) {
+    /* 32px 64px */
+/* }
+} */
+/* @media screen and (min-width: 1170px) {
   .cards-center {
     grid-template-columns: repeat(3, 1fr);
   }
+}  */
+
+/* (1170 - 64) / 3 = 368 */
+
+.cards-center {
+  display: grid;
+  column-gap: 2rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(368px, 1fr)); */
+
+  /* 3 column layout */
+  /* grid-template-columns: repeat(auto-fill, minmax(368px, 1fr)); */
+
+  /* 4 column layout */
+  grid-template-columns: repeat(auto-fill, minmax(268.5px, 1fr));
 }
