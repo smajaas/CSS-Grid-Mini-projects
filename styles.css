@@ -213,6 +213,12 @@ Cards
   }
 }  */
 
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
 /* (1170 - 64) / 3 = 368 */
 
 .cards-center {
